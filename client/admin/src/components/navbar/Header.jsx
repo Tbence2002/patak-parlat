@@ -10,7 +10,7 @@ import Cookies from 'js-cookie';
 function Header() {
 
   const handleQuit = ()=> {
-    Cookies.remove('token');
+    Cookies.remove('pgjAHoJCdDA');
   }
   return (
     <div className='header-container'>

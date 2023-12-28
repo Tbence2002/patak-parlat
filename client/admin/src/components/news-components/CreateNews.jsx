@@ -17,7 +17,7 @@ function CreateNews({lekert, setLekert, imageList, setImageList}) {
             toast.error("Ne hagyjon üres mezőket!")
             return;
         }
-        const token = Cookies.get('token');
+        const token = Cookies.get('pgjAHoJCdDA');
       
         if (!token) {
           console.error("Hiányzó token a localStorage-ból");

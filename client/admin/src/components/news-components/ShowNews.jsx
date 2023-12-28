@@ -11,7 +11,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css';
 function ShowNews({ newData, lekert, setLekert, image }) {
 
     const handleDelete = async(id) => {
-        const token = Cookies.get('token');
+        const token = Cookies.get('pgjAHoJCdDA');
 
         if (!token) {
             console.error("Hiányzó token a localStorage-ból");

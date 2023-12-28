@@ -8,7 +8,7 @@ import Cookies from 'js-cookie';
 
 function ShowMembers({ member, setLekert, lekert }) {
     const handleDelete = (id) => {
-        const token = Cookies.get('token');
+        const token = Cookies.get('pgjAHoJCdDA');
 
         if (!token) {
             console.error("Hiányzó token a localStorage-ból");

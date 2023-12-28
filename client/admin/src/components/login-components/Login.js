@@ -11,7 +11,8 @@ function Login({setIsLoggedIn}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     useEffect(() => {
-        const token = Cookies.get('token');
+        const token = Cookies.get('pgjAHoJCdDA'); // Így olvasod ki a sütit a .env-ből
+        console.log(process.env.REACT_APP_TOKEN)
         if (token) {
           setIsLoggedIn(true);
           navigate('/');
@@ -33,7 +34,8 @@ function Login({setIsLoggedIn}) {
                     if (loggedInUser.username === username) {
                         setIsLoggedIn(true);
                         navigate("/")
-                        Cookies.set('token', receivedJWT, { expires: 7 });
+                        Cookies.set('pgjAHoJCdDA', receivedJWT, { expires: 7});
+                
                     } else {
 
                         toast.error("Hibás felhasználónév/jelszó!");
