@@ -61,7 +61,6 @@
 }
 .image-container {
     display: flex;
-    gap:1rem;
     flex-wrap: wrap;
     justify-content: center;
     width:80%;
@@ -85,6 +84,15 @@
 }
 .gallery-show-content {
     margin-top:2rem;
+    padding-bottom: 2rem;
+    height: 150px;
+    width: 150px;
+}
+.gallery-show-content img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 12px;
 }
 .gallery-show-content button {
     background-color: #303030;

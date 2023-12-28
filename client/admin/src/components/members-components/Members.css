@@ -149,7 +149,7 @@
 }
 @media(max-height:841px) {
     .members-container {
-        margin:3rem 0rem;
+        margin:1rem 0rem;
         height: 100%;
     }
     .members-info h1 {
@@ -158,6 +158,6 @@
 }
 @media(max-width:713px) {
     .members-container {
-        padding-top:1rem;
+        padding-top:3rem;
     }
 }

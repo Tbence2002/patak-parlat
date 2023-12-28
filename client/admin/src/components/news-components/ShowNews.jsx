@@ -5,10 +5,12 @@ import toast, { Toaster } from 'react-hot-toast';
 import imageNews from '../../assets/palinka.jpg'
 import axiosInstance from '../../contexts/axiosInstance';
 import Cookies from 'js-cookie';
+import { confirmAlert } from 'react-confirm-alert'; 
+import 'react-confirm-alert/src/react-confirm-alert.css'; 
 
 function ShowNews({ newData, lekert, setLekert, image }) {
 
-    const handleDelete = (id) => {
+    const handleDelete = async(id) => {
         const token = Cookies.get('token');
 
         if (!token) {
@@ -16,7 +18,7 @@ function ShowNews({ newData, lekert, setLekert, image }) {
             return;
         }
 
-        axiosInstance.delete(`/news/${id}`, {
+        await axiosInstance.delete(`/news/${id}`, {
             headers: {
                 Authorization: `Bearer ${token}`,
             },
@@ -28,7 +30,21 @@ function ShowNews({ newData, lekert, setLekert, image }) {
             toast.error("Hiba történt a törlés során");
         });
     };
+    const submit = () => {
 
+        confirmAlert({
+          title: 'Biztosan törli a hírt?',
+          buttons: [
+            {
+              label: 'Igen',
+              onClick: () => handleDelete(newData.id)
+            },
+            {
+              label: 'Nem',
+            }
+          ]
+        });
+      }
 
     return (
         <div className='news-container'>
@@ -45,7 +61,7 @@ function ShowNews({ newData, lekert, setLekert, image }) {
                         />
                     </div>
                     <p>{newData.temaleiras}</p>
-                    <div className="delete-news" onClick={() => handleDelete(newData.id)}>
+                    <div className="delete-news" onClick={submit}>
                         <span>{<BsTrash />}</span>
                         <span>Hír törlése</span>
                     </div>

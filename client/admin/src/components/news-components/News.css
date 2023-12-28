@@ -198,6 +198,9 @@
     .create-box-infos h1 {
         font-size: 1.2rem;
     }
+    .create-box {
+        margin-left: 0;
+    }
 }
 @media(max-width:1000px) {
     .news-container {
@@ -235,6 +238,9 @@
     .news-main-content {
         justify-content: center;
         font-size: 15px;
+    }
+    .news-main-header {
+        width: auto;
     }
 }
 @media(max-height:841px) {
