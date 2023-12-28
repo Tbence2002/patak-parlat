@@ -18,7 +18,15 @@ function News() {
         <motion.div className='news-container'>
             {news.length > 0 ? <> <h1>Aktuális híreink</h1>
             {news.map((newTopic) => {
-                return <div className='news-container'>
+                return <motion.div className='news-container'
+                initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.3 }}
+                    variants={{
+                        visible: { opacity: 1, scale: 1 },
+                        hidden: { opacity: 0, scale: 0 }
+                    }}>
                     <div className='news-main-container'>
                         <div className='news-main-content'>
                             <div className='news-main-header'>
@@ -34,7 +42,7 @@ function News() {
                         </div>
 
                     </div>
-                </div>
+                </motion.div>
             })} </> : <div></div> }
             
         </motion.div>

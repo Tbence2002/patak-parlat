@@ -3,7 +3,7 @@
     justify-content:center;
     align-items: center;
     gap:3rem;
-    height:100vh;
+    height:100%;
     min-height: 900px;
 }
 .hero-text {
@@ -25,6 +25,11 @@
     margin:0.5rem 0rem;
     line-height: 35px;
 }
+.hero-small-text p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    width: 900px;
+}
 .hero-image img {
     height:550px;
     filter: drop-shadow(10px 5px 4px rgb(167, 167, 167));
@@ -36,7 +41,7 @@
 }
 .news-container h1 {
     font-size:2rem;
-    margin:3rem 0rem 4rem 0rem;
+    margin:4rem 0rem 3rem 0rem;
 }
 .news-main-header {
     display: flex;
@@ -66,17 +71,35 @@
     border-radius: 12px;
     margin:0.5rem 0.5rem 0rem 0rem;
 }
-@media(max-width:1378px) {
+@media(max-width:1629px) {
     .hero-image img {
-        height:400px;
+        height:450px;
     }
+    .hero-small-text p {
+        width: 600px;
+        font-size: 1rem;
+    }
+}
+@media(max-width:1378px) {
     .hero-text h1 {
         font-size:2.5rem;
     }
 }
+@media(max-width:1235px) {
+    .hero-container {
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        margin-top:5rem;
+    }
+    .hero-small-text p  {
+        width: 700px;
+    }
+}
 @media(max-width:1056px) {
     .news-container {
-        width: 80%;
+        width: 90%;
         margin: 0 auto;
     }
     .news-main-container {
@@ -100,30 +123,35 @@
         padding: 1rem;
     }
 }
-@media(max-width:939px){
-    .hero-container {
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        flex-direction: column;
-        margin-top:5rem;
+@media(max-width:761px) {
+    .hero-small-text p  {
+        width: 100%;
+    }
+    .hero-text {
+        margin:0rem 2rem;
     }
 }
 @media(max-width:569px) {
     .news-main-content {
-        width: 80%;
+        width: 100%;
         margin:0 auto;
     }
     .news-main-image img{
         width: 300px;
+    }
+    .news-main-header {
+        width: 100%;
     }
 }
 @media(max-width:450px){
     .news-main-image img{
         width:300px;
         border-radius: 12px;
+        margin: 0;
+        margin-bottom: -10px;
     }
     .hero-image img {
         height:300px;
     }
+    
 }

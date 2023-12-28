@@ -16,7 +16,10 @@ function Navbar() {
                     <i className='open' onClick={() => setMenu(!menu)}><RiMenu4Fill /></i>
                     <nav>
                         <ul className={menu ? "shownavbar" : ""}>
+                            <div className="menu-title">
+                            <i>Patak-Párlat</i>
                             <i className="close" onClick={() => setMenu(!menu)}><GrClose /></i>
+                            </div>
                             <li><Link to="/">Kezdőlap</Link></li>
                             <li><Link to="/MyGallery">Galéria</Link></li>
                         </ul>
