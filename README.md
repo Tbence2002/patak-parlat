@@ -1,4 +1,4 @@
-Pálinkafőzde weboldal.
+# Pálinkafőzde weboldal.
 
 A weboldal közös együttműködéssel készült el egy Backend fejlesztővel.
 
@@ -10,7 +10,7 @@ A backend úgy lett megírva, hogy az teljesen biztonságos legyen, az előre el
 A backend Spring, a frontend React keretrendszerben kódolt, CSS nyelvvel formázott, és framer-motion csomaggal animált.
 A galériát firebase-ben kezeljük, képfeltöltés esetén ott kerül tárolásra, és onnan kerül lekérésre oldal újratöltés nélkül. Ezeket a képeket admin oldalról lehet törölni, mely a firebase-ban is törlése kerül.
 
-Oldal elindítása fejlesztői környezetben:
+# Oldal elindítása fejlesztői környezetben:
 
 Projekt futtatása előtt, telepíteni szükséges a node_modules-t az "npm i" paranccsal.
 Amennyiben a node_modules telepítésre került, "npm start" paranccsal futtathatjuk az oldalakat.
